@@ -13,7 +13,7 @@ import university.uniHiTViewModel
 
 class UniversityView: View() {
 
-    val uniHiTViewModel = UniDashViewModel(UniDash())
+    val uniHiTViewModel = UniHiTViewModel(UniDash())
 
 
     override val root = vbox {
@@ -184,10 +184,10 @@ class UniversityView: View() {
 
                         tableview<Person> {
                             items = listOf(
-                                Person(0,"Jake", 0),
-                                Person(1,"Jake", 1),
-                                Person(2,"Jake", 2),
-                                Person(3,"Jake", 3)
+                                Person(0,"Helene", 0),
+                                Person(1,"Helene", 1),
+                                Person(2,"Helene", 2),
+                                Person(3,"Helene", 3)
                             ).observable()
 
                             column("ID",Person::idProperty)
@@ -216,8 +216,10 @@ class UniversityView: View() {
 
                         tableview<Subject> {
                             items = listOf(
-                                Subject("IDV", "IDV303", 100, 40, 300f),
-                                Subject("IXT", "IXT303", 100, 40, 300f)
+                                    Subject("IXT", "IXT300", 40, 40, 40000f),
+                                    Subject("IDV", "IDV300", 40, 40, 40000f),
+                            Subject("LEANUX", "LX303", 20, 20, 10000f)
+
                             ).observable()
 
                             column("NAME",Subject::name)
@@ -393,7 +395,7 @@ class UniversityView: View() {
                 }
 
             }
-
+Well
         }
     }
 }

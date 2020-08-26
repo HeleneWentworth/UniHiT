@@ -23,18 +23,20 @@ class UniHiTViewModel(val uniHiT: UniHiT): ViewModel(){
     var person = bind {uniHiT.personProperty  }
 
     init{
-        university.set(University("Lion Institute", 100000f))
+        university.set(University("Open window", 120000f))
 
-        addSubject("IDV", "IDV303", 100, 40, 300f)
-        addSubject("IXT", "IXT303", 100, 40, 300f)
+        addSubject("IXT", "IXT300", 40, 40, 40000f)
+        addSubject("IDV", "IDV300", 40, 40, 40000f)
+        addSubject("LEANUX", "LX303", 20, 20, 10000f)
 
-        addPerson("Jake", 0)
 
-        addPerson("Jake", 1)
+        addPerson("Helene", 0)
 
-        addPerson("Jake", 2)
+        addPerson("Helene", 1)
 
-        addPerson("Jake", 3)
+        addPerson("Helene", 2)
+
+        addPerson("Helene", 3)
 
 
     }
