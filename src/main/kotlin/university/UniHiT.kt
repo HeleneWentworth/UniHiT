@@ -14,7 +14,6 @@ class UniHiT {
     val universityProperty = SimpleObjectProperty<University>()
 
     val personProperty = SimpleListProperty<SimpleObjectProperty<Person>>()
-
 }
 
 class UniHiTViewModel(val uniHiT: UniHiT): ViewModel(){
@@ -29,7 +28,6 @@ class UniHiTViewModel(val uniHiT: UniHiT): ViewModel(){
         addSubject("IDV", "IDV300", 40, 40, 40000f)
         addSubject("LEANUX", "LX303", 20, 20, 10000f)
 
-
         addPerson("Helene", 0)
 
         addPerson("Helene", 1)
@@ -37,15 +35,13 @@ class UniHiTViewModel(val uniHiT: UniHiT): ViewModel(){
         addPerson("Helene", 2)
 
         addPerson("Helene", 3)
-
-
     }
 
     fun start(){
 
     }
 
-    fun getUniName(): String{
+    fun getUniversityName(): String{
         return university.value.nameProperty.value
     }
 
@@ -131,8 +127,4 @@ class UniHiTViewModel(val uniHiT: UniHiT): ViewModel(){
             }
         }
     }
-
-
-
-
 }

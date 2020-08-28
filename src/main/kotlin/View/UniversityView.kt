@@ -1,26 +1,23 @@
 package View
 
-import javafx.beans.property.SimpleStringProperty
-import javafx.collections.ObservableList
 import javafx.geometry.Pos
 import javafx.scene.paint.Color
+import javafx.beans.property.SimpleStringProperty
+import javafx.collections.ObservableList
 import javafx.scene.text.TextAlignment
 import person.Person
 import subject.Subject
-import tornadofx.*
 import university.UniHiT
-import university.uniHiTViewModel
+import university.UniversityViewModel
 
 class UniversityView: View() {
 
-    val uniHiTViewModel = UniHiTViewModel(UniDash())
+    val universityViewModel = UniversityViewModel(UniHiT())
 
 
     override val root = vbox {
-        val subject = uniHiTViewModel.subject.value
+        val subject = universityViewModel.subject.value
         borderpane {
-
-
 
             left = vbox() {
                 setPrefSize(200.0, 960.0)
@@ -29,121 +26,116 @@ class UniversityView: View() {
                 label ("UniHiT"){
                     setPrefSize(200.0, 30.0)
                     vboxConstraints {
-                        marginTop = 10.0
-                        marginBottom = 10.0
+                        marginTop = 12.0
+                        marginBottom = 12.0
                         alignment = Pos.CENTER
                     }
                     style{
-                        textFill = Color.rgb(255, 255, 255)
+                        textFill = Color.rgb(224, 224, 224)
                         textAlignment = TextAlignment.CENTER
                     }
                 }
 
-                label (uniHiTViewModel.getUniName()){
+                label (universityViewModel.getUniName()){
                     setPrefSize(200.0, 10.0)
                     vboxConstraints {
-                        marginTop = 10.0
-                        marginBottom = 10.0
+                        marginTop = 12.0
+                        marginBottom = 12.0
                         alignment = Pos.CENTER
                     }
                     style{
-                        textFill = Color.rgb(255, 255, 255)
+                        textFill = Color.rgb(224, 224, 224)
                         textAlignment = TextAlignment.CENTER
                     }
                 }
 
-                label ("Subjects: " + uniHiTViewModel.getSubjectsCount().toString()){
+                label ("Subjects: " + universityViewModel.getSubjectsCount().toString()){
                     setPrefSize(200.0, 10.0)
                     vboxConstraints {
-                        marginTop = 10.0
-                        marginBottom = 10.0
+                        marginTop = 12.0
+                        marginBottom = 12.0
                         alignment = Pos.CENTER
                     }
                     style{
-                        textFill = Color.rgb(255, 255, 255)
+                        textFill = Color.rgb(224, 224, 224)
                         textAlignment = TextAlignment.CENTER
                     }
                 }
-                label ("Diploma Students: " + uniHiTViewModel.getDiStudentCount().toString()){
+                label ("Diploma Students: " + universityViewModel.getDiStudentCount().toString()){
                     setPrefSize(200.0, 10.0)
                     vboxConstraints {
-                        marginTop = 10.0
-                        marginBottom = 10.0
+                        marginTop = 12.0
+                        marginBottom = 12.0
                         alignment = Pos.CENTER
                     }
                     style{
-                        textFill = Color.rgb(255, 255, 255)
+                        textFill = Color.rgb(224, 224, 224)
                         textAlignment = TextAlignment.CENTER
                     }
                 }
 
-                label ("Degree Students: " + uniHiTViewModel.getDeStudentCount().toString()){
+                label ("Degree Students: " + universityViewModel.getDeStudentCount().toString()){
                     setPrefSize(200.0, 10.0)
                     vboxConstraints {
-                        marginTop = 10.0
-                        marginBottom = 10.0
+                        marginTop = 12.0
+                        marginBottom = 12.0
                         alignment = Pos.CENTER
                     }
                     style{
-                        textFill = Color.rgb(255, 255, 255)
+                        textFill = Color.rgb(224, 224, 224)
                         textAlignment = TextAlignment.CENTER
                     }
                 }
 
-                label ("Academic Staff: " + uniHiTViewModel.getAcStaffCount().toString()){
+                label ("Academic Staff: " + universityViewModel.getAcStaffCount().toString()){
                     setPrefSize(200.0, 10.0)
                     vboxConstraints {
-                        marginTop = 10.0
-                        marginBottom = 10.0
+                        marginTop = 12.0
+                        marginBottom = 12.0
                         alignment = Pos.CENTER
                     }
                     style{
-                        textFill = Color.rgb(255, 255, 255)
+                        textFill = Color.rgb(224, 224, 224)
                         textAlignment = TextAlignment.CENTER
                     }
                 }
 
-                label ("Administrative Staff: " + uniHiTViewModel.getAdStaffCount().toString()){
+                label ("Administrative Staff: " + universityViewModel.getAdStaffCount().toString()){
                     setPrefSize(200.0, 10.0)
                     vboxConstraints {
-                        marginTop = 10.0
-                        marginBottom = 10.0
+                        marginTop = 12.0
+                        marginBottom = 12.0
                         alignment = Pos.CENTER
                     }
                     style{
-                        textFill = Color.rgb(255, 255, 255)
+                        textFill = Color.rgb(224, 224, 224)
                         textAlignment = TextAlignment.CENTER
                     }
                 }
 
-                label ("All people: " + uniHiTViewModel.getAllPeople().toString()){
+                label ("All people: " + universityViewModel.getAllPeople().toString()){
                     setPrefSize(200.0, 10.0)
                     vboxConstraints {
-                        marginTop = 10.0
-                        marginBottom = 10.0
+                        marginTop = 12.0
+                        marginBottom = 12.0
                         alignment = Pos.CENTER
                     }
                     style{
-                        textFill = Color.rgb(255, 255, 255)
+                        textFill = Color.rgb(224, 224, 224)
                         textAlignment = TextAlignment.CENTER
                     }
                 }
-
-
 
                 style{
-                    backgroundColor += Color.rgb(22, 41, 53)
+                    backgroundColor += Color.rgb(125, 146, 158)
                 }
-
             }
 
             top = vbox{
-                setPrefSize(100.0, 30.0)
-
+                setPrefSize(90.0, 30.0)
                 useMaxWidth = true
-
                 style{
-                    backgroundColor += Color.rgb(22, 41, 53)
+                    backgroundColor += Color.rgb(125, 146, 158)
                 }
             }
 
@@ -152,7 +144,7 @@ class UniversityView: View() {
                 setPrefSize(1000.0, 960.0)
                 useMaxWidth = true
                 style{
-                    backgroundColor += Color.rgb(20, 31, 38)
+                    backgroundColor += Color.rgb(73, 89, 115)
                 }
 
                 borderpane {
@@ -283,11 +275,11 @@ class UniversityView: View() {
 
                             button("Add Person") {
                                 action {
-                                    println(uniHiTViewModel.getAllPeople().toString() + " Before Add")
-                                    uniHiTViewModel.addPerson(name.value.toString(),type.value.toInt())
+                                    println(universityViewModel.getAllPeople().toString() + " Before Add")
+                                    universityViewModel.addPerson(name.value.toString(),type.value.toInt())
                                     println("Added Person")
 
-                                    println(uniHiTViewModel.getAllPeople().toString() + " After Add")
+                                    println(universityViewModel.getAllPeople().toString() + " After Add")
                                     name.value = ""
                                     type.value = ""
 
@@ -313,6 +305,49 @@ class UniversityView: View() {
                                 backgroundColor += Color.WHITE
                             }
                         }
+                        val model = ViewModel()
+                        val name = model.bind { SimpleStringProperty() }
+                        val code = model.bind { SimpleStringProperty() }
+                        val credits = model.bind { SimpleStringProperty() }
+                        val hours = model.bind { SimpleStringProperty() }
+                        val price = model.bind { SimpleStringProperty() }
+
+                        form{
+                            fieldset {
+                                field("Name"){
+                                    textfield(name)
+                                }
+
+                                field("Code"){
+                                    textfield(code)
+                                }
+                                field("Credits"){
+                                    textfield(credits)
+                                }
+                                field("Hours"){
+                                    textfield(hours)
+                                }
+                                field("Price"){
+                                    textfield(price)
+                                }
+                            }
+
+                            button("Add Subject") {
+                                action {
+                                    println(universityViewModel.getSubjectsCount().toString() + " Before Add")
+                                    universityViewModel.addSubject(name.value.toString(), code.value.toString(), credits.value.toInt(), hours.value.toInt(), price.value.toFloat())
+                                    println("Added Person")
+
+                                    println(universityViewModel.getSubjectsCount().toString() + " After Add")
+                                    name.value = ""
+                                    code.value = ""
+                                    credits.value = ""
+                                    hours.value = ""
+                                    price.value = ""
+
+                                }
+                            }
+                        }
 
                         setPrefSize(450.0, 302.0)
 
@@ -323,7 +358,7 @@ class UniversityView: View() {
                             marginBottom = 30.0
                         }
                         style{
-                            backgroundColor += Color.rgb(30, 31, 38)
+                            backgroundColor += Color.rgb(28, 39, 43)
                         }
                     }
 
@@ -335,7 +370,7 @@ class UniversityView: View() {
                         alignment = Pos.CENTER
                     }
                     style{
-                        backgroundColor += Color.rgb(142, 172, 191)
+                        backgroundColor += Color.rgb(132, 152, 188)
                     }
 
                 }
@@ -348,6 +383,29 @@ class UniversityView: View() {
                                 backgroundColor += Color.WHITE
                             }
                         }
+                        label ("Students need to pay R" + universityViewModel.getMoneyFees().toString()){
+                            style{
+                                textFill = Color.rgb(255, 255, 255)
+                            }
+                        }
+
+                        label ("Staff will be payed R" + universityViewModel.getStaffPayment().toString()){
+                            style{
+                                textFill = Color.rgb(255, 255, 255)
+                            }
+                        }
+                        var projection =   universityViewModel.getMoneyFees() - universityViewModel.getStaffPayment()
+                        label ("End of Month R" + projection.toString()){
+                            style{
+                                textFill = Color.rgb(255, 255, 255)
+                            }
+                        }
+                        var poolProjected = universityViewModel.getUniversityPool() - universityViewModel.getStaffPayment() - universityViewModel.getMoneyFees()
+                        label ("Pool Funds R" + poolProjected.toString()){
+                            style{
+                                textFill = Color.rgb(255, 255, 255)
+                            }
+                        }
 
                         setPrefSize(450.0, 320.0)
 
@@ -358,13 +416,42 @@ class UniversityView: View() {
                             marginBottom = 30.0
                         }
                         style{
-                            backgroundColor += Color.rgb(30, 31, 38)
+                            backgroundColor += Color.rgb(28, 33, 40)
                         }
                     }
                     right = vbox {
                         label ("Add subject to people"){
                             style{
                                 backgroundColor += Color.WHITE
+                            }
+                        }
+
+                        val model = ViewModel()
+                        val name = model.bind { SimpleStringProperty() }
+                        val id = model.bind { SimpleStringProperty() }
+
+                        form{
+                            fieldset {
+                                field("Persons Id"){
+                                    textfield(name)
+                                }
+
+                                field("Subject Id"){
+                                    textfield(id)
+                                }
+                            }
+
+                            button("Add Subject") {
+                                action {
+                                    println(universityViewModel.getRegisteredSubjectCount().toString() + " Before Add")
+                                    universityViewModel.addSubjectToPerson(name.value.toInt(),id.value.toInt())
+                                    println("Added Person")
+
+                                    println(universityViewModel.getRegisteredSubjectCount().toString() + " After Add")
+                                    name.value = ""
+                                    id.value = ""
+
+                                }
                             }
                         }
 
@@ -377,7 +464,7 @@ class UniversityView: View() {
                             marginBottom = 30.0
                         }
                         style{
-                            backgroundColor += Color.rgb(30, 31, 38)
+                            backgroundColor += Color.rgb(28, 33, 40)
                         }
                     }
 
@@ -389,7 +476,7 @@ class UniversityView: View() {
                         alignment = Pos.CENTER
                     }
                     style{
-                        backgroundColor += Color.rgb(142, 172, 191)
+                        backgroundColor += Color.rgb(132, 152, 188)
                     }
 
                 }
